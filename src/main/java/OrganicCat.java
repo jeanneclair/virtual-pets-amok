@@ -24,10 +24,9 @@ public class OrganicCat extends Organic implements Tick {
 	@Override
 	public void feed() {
 		
-		
-		setHunger(getHunger() - 10);
-		setThirst(getThirst() - 10);
-		setHappiness(getHappiness() + 5);
+		hunger -= 10;
+		thirst += 10;
+		happiness += 10;
 		litterBoxDirtiness +=10;
 		
 	}

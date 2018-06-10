@@ -3,8 +3,8 @@ public abstract class Organic extends VirtualPet {
 	
 	
 
-	private int hunger;
-	private int thirst;
+	protected int hunger;
+	protected int thirst;
 
 
 
@@ -37,6 +37,7 @@ public abstract class Organic extends VirtualPet {
 		hunger -= 10;
 		thirst += 10;
 		setHappiness(getHappiness() + 5);
+		
 		
 		
 	}

@@ -4,7 +4,7 @@ public abstract class VirtualPet implements Tick {
 	private String name;
 	private String description;
 	private int health;
-	private int happiness;
+	protected int happiness;
 	
 	public VirtualPet(String name, String description, int health, int happiness) {
 		super();
