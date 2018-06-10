@@ -38,6 +38,7 @@ public abstract class Organic extends VirtualPet {
 		thirst += 10;
 		setHappiness(getHappiness() + 5);
 		
+		
 	}
 
 	public void water() {

@@ -21,15 +21,16 @@ public class OrganicCat extends Organic implements Tick {
 		setHappiness(getHappiness() + 5);
 	}
 	
-//	public void tick(OrganicCat organicCat) {
-//		
-//		litterBoxCleanliness -= 2;
-//		setHealth(getHealth() - 2);
-//		setHappiness(getHappiness() - 2);
-//		setHunger(getHunger() + 2);
-//		setThirst(getThirst() + 2);
-//		
-//	}
+	@Override
+	public void feed() {
+		
+		
+		setHunger(getHunger() - 10);
+		setThirst(getThirst() - 10);
+		setHappiness(getHappiness() + 5);
+		litterBoxDirtiness +=10;
+		
+	}
 	
 	@Override
 	public void tick(VirtualPet virtualPet) {

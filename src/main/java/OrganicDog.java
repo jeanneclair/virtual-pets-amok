@@ -20,11 +20,23 @@ public class OrganicDog extends Organic implements WalkDog, Tick {
 		setHappiness(getHappiness() + 5);
 		
 	}
+	@Override
+	public void feed() {
+		
+		
+		setHunger(getHunger() - 10);
+		setThirst(getThirst() - 10);
+		setHappiness(getHappiness() + 5);
+		cageDirtiness +=10;
+		
+	}
 
 	@Override
 	public void walkDog(VirtualPet virtualPet) {
 
 		cageDirtiness -=5;
+//		health +=10;
+//		happiness +=10;
 		setHealth(getHealth() + 5);
 		setHappiness(getHappiness() + 5);
 	}
