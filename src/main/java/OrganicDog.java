@@ -18,56 +18,44 @@ public class OrganicDog extends Organic implements WalkDog, Tick {
 		cageDirtiness -= cageDirtiness;
 		setHealth(getHealth() + 5);
 		setHappiness(getHappiness() + 5);
-		
+
 	}
+
 	@Override
 	public void feed() {
-		
-		
+
 		hunger -= 10;
 		thirst += 10;
 		happiness += 10;
-		cageDirtiness +=10;
-		
+		cageDirtiness += 10;
+
 	}
 
 	@Override
 	public void walkDog(VirtualPet virtualPet) {
 
-		cageDirtiness -=5;
-//		health +=10;
-//		happiness +=10;
-		setHealth(getHealth() + 5);
-		setHappiness(getHappiness() + 5);
+		cageDirtiness -= 5;
+		health += 10;
+		happiness += 10;
+
 	}
 
 	@Override
 	public void tick(VirtualPet virtualPet) {
 
 		cageDirtiness += 2;
-		setHealth(getHealth() - 2);
-		setHappiness(getHappiness() - 2);
-		setHunger(getHunger() + 2);
-		setThirst(getThirst() + 2);
-	}
+		health -= 2;
+		happiness -= 2;
+		hunger += 2;
+		thirst += 2;
 
-	private void setThirst(int i) {
-
-		return;
-	}
-
-	private void setHunger(int i) {
-		
-		return;
-		
 	}
 
 	@Override
 	public String toString() {
-		return "Organic Name= " + getName()  + ", Description= " + getDescription()+ ", Health= " + getHealth()
-		+ ", Happiness= " + getHappiness() + ", Hunger= " + getHunger()
-				+ ", Thirst= " + getThirst() + ", Cage Dirtiness= " + getCageDirtiness();
+		return "Organic Name= " + getName() + ", Description= " + getDescription() + ", Health= " + getHealth()
+				+ ", Happiness= " + getHappiness() + ", Hunger= " + getHunger() + ", Thirst= " + getThirst()
+				+ ", Cage Dirtiness= " + getCageDirtiness();
 	}
-	
-	
+
 }

@@ -198,7 +198,7 @@ public class VirtualPetShelterApp {
 					System.out.println("\n You have added: " + admitName + " as a RoboticDog.");
 
 					break;
-				}//end petType switch statement
+				}// end petType switch statement
 				break;
 			} // end menuChoice switch statement
 		} // end of while loop

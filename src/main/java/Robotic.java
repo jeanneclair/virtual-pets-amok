@@ -2,11 +2,11 @@
 public abstract class Robotic extends VirtualPet implements Tick {
 
 	private int rustiness;
-	
+
 	public Robotic(String name, String description, int health, int happiness, int rustiness) {
 		super(name, description, health, happiness);
 		this.rustiness = rustiness;
-		
+
 	}
 
 	public int getRustiness() {
@@ -14,11 +14,11 @@ public abstract class Robotic extends VirtualPet implements Tick {
 	}
 
 	public void oil() {
-		
+
 		setHealth(getHealth() + 10);
 		setHappiness(getHappiness() + 10);
 		rustiness -= rustiness;
-		
+
 	}
 
 	@Override
@@ -26,20 +26,14 @@ public abstract class Robotic extends VirtualPet implements Tick {
 
 		setHealth(getHealth() - 2);
 		setHappiness(getHappiness() - 2);
-		rustiness +=2;
-		
+		rustiness += 2;
+
 	}
 
 	@Override
 	public String toString() {
-		return "Robotic: Name= " + getName() + ", Description= "
-				+ getDescription() + ", Health= " + getHealth() + ", Happiness= " + getHappiness() + ", Rustiness= " + getRustiness();
+		return "Robotic: Name= " + getName() + ", Description= " + getDescription() + ", Health= " + getHealth()
+				+ ", Happiness= " + getHappiness() + ", Rustiness= " + getRustiness();
 	}
-
-//	@Override
-//	public String toString() {
-//		return "Robotic [getRustiness()=" + getRustiness() + "]";
-//	}
-//	
 
 }

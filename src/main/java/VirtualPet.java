@@ -3,9 +3,9 @@ public abstract class VirtualPet implements Tick {
 
 	private String name;
 	private String description;
-	private int health;
+	protected int health;
 	protected int happiness;
-	
+
 	public VirtualPet(String name, String description, int health, int happiness) {
 		super();
 		this.name = name;
@@ -37,7 +37,7 @@ public abstract class VirtualPet implements Tick {
 	public void setHealth(int health) {
 		this.health = health;
 	}
-	
+
 	public void tick(VirtualPet virtualPet) {
 
 		setHealth(getHealth() - 2);
@@ -47,10 +47,8 @@ public abstract class VirtualPet implements Tick {
 
 	@Override
 	public String toString() {
-		return "Name=" + getName() + ", Description= " + getDescription() + ", Health= "
-				+ getHealth() + ", Happiness= " + getHappiness();
+		return "Name=" + getName() + ", Description= " + getDescription() + ", Health= " + getHealth() + ", Happiness= "
+				+ getHappiness();
 	}
 
-
-	
 }
