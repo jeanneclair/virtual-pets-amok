@@ -67,4 +67,17 @@ public class VirtualPetShelter {
 		pet.setHappiness(100);
 	}
 
+	//test
+	public void remove(String name) {
+
+		pets.remove(name);
+	}
+
+//	//test
+//	public void remove(VirtualPet pet) {
+//		pets.remove(pet.getName(), pet);		
+//	}
+	
+	
+
 }

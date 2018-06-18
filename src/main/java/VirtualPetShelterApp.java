@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class VirtualPetShelterApp {
@@ -36,18 +38,32 @@ public class VirtualPetShelterApp {
 			switch (menuChoice) {
 			case "1":
 
+				List<String> deadPetNames = new ArrayList<String>();
+				
 				for (VirtualPet virtualPet : shelter.getAllPets()) {
 
 					if (virtualPet instanceof Organic) {
 
 						((Organic) virtualPet).feed();
 
+						if (((Organic) virtualPet).getThirst() >= 101) {
+
+							deadPetNames.add(virtualPet.getName());
+
+						}
+
+						virtualPet.tick(virtualPet);
 					}
-					virtualPet.tick(virtualPet);
 
 				}
 
-				System.out.println("\nYum!\n");
+				for (String deadPetName : deadPetNames) {
+					System.out.println(deadPetName + " has died of thirst.");
+					shelter.pets.remove(deadPetName);
+
+				}
+				System.out.println("\nYou have fed the pets.\n");
+
 
 				break;
 
@@ -63,7 +79,7 @@ public class VirtualPetShelterApp {
 					virtualPet.tick(virtualPet);
 
 				}
-				System.out.println("\nSlurp!\n");
+				System.out.println("\nYou have watered the pets!\n");
 
 				break;
 
@@ -79,7 +95,7 @@ public class VirtualPetShelterApp {
 					virtualPet.tick(virtualPet);
 
 				}
-				System.out.println("\nClean!\n");
+				System.out.println("\nYou have cleaned the litter box!\n");
 
 				break;
 
@@ -95,7 +111,7 @@ public class VirtualPetShelterApp {
 					virtualPet.tick(virtualPet);
 
 				}
-				System.out.println("Cleaned!\n");
+				System.out.println("You have cleaned the cages!\n");
 
 				break;
 
@@ -111,7 +127,7 @@ public class VirtualPetShelterApp {
 					virtualPet.tick(virtualPet);
 
 				}
-				System.out.println("Walked!\n");
+				System.out.println("You have walked the dogs!\n");
 
 				break;
 
@@ -127,7 +143,7 @@ public class VirtualPetShelterApp {
 					virtualPet.tick(virtualPet);
 
 				}
-				System.out.println("Oiled!\n");
+				System.out.println("You have oiled the robots!\n");
 
 				break;
 
